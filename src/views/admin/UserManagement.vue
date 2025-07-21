@@ -118,13 +118,13 @@
     },
     methods: {
       async fetchUsers() {
-        const res = await axios.get('http://localhost:8000/api/v1/users/');
+        const res = await axios.get(' https://4c50462ee0ae.ngrok-free.app/api/v1/users/');
         this.users = res.data;
         this.totalUsers = res.data.length;
         this.subscribedUsers = res.data.filter(u => u.subscribed).length;
       },
       async fetchRoles() {
-        const res = await axios.get('http://localhost:8000/api/v1/roles/');
+        const res = await axios.get(' https://4c50462ee0ae.ngrok-free.app/api/v1/roles/');
         this.roles = res.data;
       },
       openModal(user) {
@@ -132,12 +132,12 @@
         this.showModal = true;
       },
       async updateUser() {
-        await axios.put(`http://localhost:8000/api/v1/users/${this.form.id}/`, this.form);
+        await axios.put(` https://4c50462ee0ae.ngrok-free.app/api/v1/users/${this.form.id}/`, this.form);
         this.showModal = false;
         this.fetchUsers();
       },
       async deleteUser(id) {
-        await axios.delete(`http://localhost:8000/api/v1/users/${id}/`);
+        await axios.delete(` https://4c50462ee0ae.ngrok-free.app/api/v1/users/${id}/`);
         this.fetchUsers();
       }
     },

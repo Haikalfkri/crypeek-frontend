@@ -132,7 +132,7 @@
     methods: {
       async fetchCoins() {
         try {
-          const response = await axios.get("http://localhost:8000/api/v1/allCoinDetailList/");
+          const response = await axios.get(" https://4c50462ee0ae.ngrok-free.app/api/v1/allCoinDetailList/");
           this.coins = response.data;
         } catch (error) {
           console.error("Failed to fetch coins:", error);
