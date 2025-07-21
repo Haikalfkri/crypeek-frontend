@@ -72,6 +72,8 @@
   import axios from 'axios';
   import logoImg from '@/assets/crypeek-logo.png';
   
+  axios.defaults.headers.common["ngrok-skip-browser-warning"] = true;
+
   export default {
     name: "LoginPage",
     data() {

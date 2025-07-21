@@ -118,6 +118,8 @@
   import Navbar from "@/components/NavbarCom.vue";
   import axios from "axios";
   
+  axios.defaults.headers.common["ngrok-skip-browser-warning"] = true;
+
   export default {
     name: "CoinListPage",
     components: {

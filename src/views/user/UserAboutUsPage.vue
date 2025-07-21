@@ -99,7 +99,7 @@ export default {
       try {
         const token = localStorage.getItem('accessToken');
         await axios.post(
-          'http://127.0.0.1:8000/api/v1/userFeedback/',
+          'https://4c50462ee0ae.ngrok-free.app/api/v1/userFeedback/',
           { feedback: this.feedback },
           {
             withCredentials: true,

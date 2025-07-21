@@ -204,6 +204,8 @@ import ChartSwitcher from '@/components/ChartSwitcher.vue';
 import Chart from '@/components/PredictionChart.vue';
 import axios from 'axios';
 
+axios.defaults.headers.common["ngrok-skip-browser-warning"] = true;
+
 export default {
     name: 'CoinDetailPage',
     components: { Navbar, ChartSwitcher, Chart },
