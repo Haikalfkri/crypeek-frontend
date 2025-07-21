@@ -63,7 +63,7 @@
         error.value = null;
         try {
           const response = await axios.post(
-            " https://4c50462ee0ae.ngrok-free.app/api/v1/fetchCryptoChart/",
+            " https://b8cb2566144d.ngrok-free.app/api/v1/fetchCryptoChart/",
             {
               coin: props.coin,
               period: selectedPeriod.value,

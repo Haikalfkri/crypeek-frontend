@@ -115,7 +115,7 @@ export default {
       this.selectedRange = range
       const hours = range === '1D' ? 24 : range === '7D' ? 24 * 7 : 24 * 30
       try {
-        const res = await axios.get(`https://4c50462ee0ae.ngrok-free.app/api/v1/chart/${this.coin}/?hours=${hours}`)
+        const res = await axios.get(`https://b8cb2566144d.ngrok-free.app/api/v1/chart/${this.coin}/?hours=${hours}`)
         this.rawData = res.data;
       } catch (err) {
         console.error('Chart fetch failed', err)
