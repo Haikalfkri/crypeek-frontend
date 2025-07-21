@@ -3,7 +3,7 @@
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
             <!-- Left Section: Title and Links -->
             <div class="flex items-center space-x-6">
-                <router-link href="/CryptoNewsPage" class="flex items-center space-x-2">
+                <router-link to="/CryptoNewsPage" class="flex items-center space-x-2">
                     <img :src="logo" alt="Logo" class="h-10 w-10">
                     <span class="hidden md:inline text-xl font-bold text-gray-900">Crypeek</span>
                 </router-link>
