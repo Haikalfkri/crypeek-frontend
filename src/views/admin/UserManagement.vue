@@ -120,13 +120,13 @@
     },
     methods: {
       async fetchUsers() {
-        const res = await axios.get('https://b8cb2566144d.ngrok-free.app/api/v1/users/');
+        const res = await axios.get('https://3af9049ebeaf.ngrok-free.app/api/v1/users/');
         this.users = res.data;
         this.totalUsers = res.data.length;
         this.subscribedUsers = res.data.filter(u => u.subscribed).length;
       },
       async fetchRoles() {
-        const res = await axios.get('https://b8cb2566144d.ngrok-free.app/api/v1/roles/');
+        const res = await axios.get('https://3af9049ebeaf.ngrok-free.app/api/v1/roles/');
         this.roles = res.data;
       },
       openModal(user) {
@@ -134,12 +134,12 @@
         this.showModal = true;
       },
       async updateUser() {
-        await axios.put(` https://b8cb2566144d.ngrok-free.app/api/v1/users/${this.form.id}/`, this.form);
+        await axios.put(` https://3af9049ebeaf.ngrok-free.app/api/v1/users/${this.form.id}/`, this.form);
         this.showModal = false;
         this.fetchUsers();
       },
       async deleteUser(id) {
-        await axios.delete(` https://b8cb2566144d.ngrok-free.app/api/v1/users/${id}/`);
+        await axios.delete(` https://3af9049ebeaf.ngrok-free.app/api/v1/users/${id}/`);
         this.fetchUsers();
       }
     },

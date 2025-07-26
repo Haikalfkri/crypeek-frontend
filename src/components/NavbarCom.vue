@@ -123,7 +123,7 @@ export default {
             const refreshToken = localStorage.getItem("refreshToken");
 
             try {
-                await axios.post("https://b8cb2566144d.ngrok-free.app/api/v1/logout", {
+                await axios.post("https://3af9049ebeaf.ngrok-free.app/api/v1/logout", {
                     refresh: refreshToken
                 }, {
                     headers: {
