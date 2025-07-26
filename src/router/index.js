@@ -17,11 +17,13 @@ import UserManagement from "@/views/admin/UserManagement.vue";
 
 import UserFeedback from "@/views/admin/UserFeedback.vue";
 
+import HomePage from "@/views/all/HomePage.vue";
+
 const routes = [
     // auth
     {
         path: "/",
-        component: LoginPage,
+        component: HomePage,
         beforeEnter: (to, from, next) => {
             const token = localStorage.getItem('accessToken');
             const role = localStorage.getItem('role');
@@ -48,6 +50,11 @@ const routes = [
         path: "/register",
         name: "RegisterPage",
         component: RegisterPage
+    },
+    {
+        path: "/Home",
+        name: "HomePage",
+        component: HomePage,
     },
     {
         path: "/userManagement",
@@ -109,9 +116,9 @@ router.beforeEach((to, from, next) => {
 
     if (to.meta.requiresAuth) {
         if(!token) {
-            next("/login"); // redirect to login if not authenticated
+            next("/Home"); // redirect to login if not authenticated
         } else if (to.meta.role && to.meta.role !== role) {
-            next("/login"); // redirect to login if role do not match
+            next("/Home"); // redirect to login if role do not match
         } else {
             next();
         }
