@@ -91,7 +91,7 @@
       async Login() {
         this.loading = true;
         try {
-          const response = await axios.post("https://3af9049ebeaf.ngrok-free.app/api/v1/login", {
+          const response = await axios.post("https://09a422305f64.ngrok-free.app/api/v1/login", {
             email: this.email,
             password: this.password,
           });

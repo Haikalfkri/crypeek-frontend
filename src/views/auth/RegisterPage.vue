@@ -113,7 +113,7 @@
   
         this.loading = true;
         try {
-          await axios.post("https://3af9049ebeaf.ngrok-free.app/api/v1/register", {
+          await axios.post("https://09a422305f64.ngrok-free.app/api/v1/register", {
             username: this.username,
             email: this.email,
             password: this.password,

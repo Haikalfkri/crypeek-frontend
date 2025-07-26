@@ -103,7 +103,7 @@ export default {
   methods: {
     async fetchNews() {
       try {
-        const res = await axios.get("https://3af9049ebeaf.ngrok-free.app/api/v1/cryptoInsightList/");
+        const res = await axios.get("https://09a422305f64.ngrok-free.app/api/v1/cryptoInsightList/");
         this.newsList = res.data;
       } catch (error) {
         console.error("Failed to fetch insight news:", error);

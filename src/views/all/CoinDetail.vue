@@ -253,7 +253,7 @@ export default {
     methods: {
         async fetchCoin() {
             try {
-                const res = await axios.get(`https://3af9049ebeaf.ngrok-free.app/api/v1/coin/${this.coinSymbol}/`);
+                const res = await axios.get(`https://09a422305f64.ngrok-free.app/api/v1/coin/${this.coinSymbol}/`);
                 this.coin = res.data;
             } catch (err) {
                 console.error('Error fetching coin:', err);
@@ -263,7 +263,7 @@ export default {
         },
         async fetchPrediction() {
             try {
-                const res = await axios.get(`https://3af9049ebeaf.ngrok-free.app/api/v1/prediction/${this.coinSymbolWithUSDT}/?days=${this.selectedDays}`);
+                const res = await axios.get(`https://09a422305f64.ngrok-free.app/api/v1/prediction/${this.coinSymbolWithUSDT}/?days=${this.selectedDays}`);
                 this.prediction = res.data; // reverse to show earliest to latest
             } catch (err) {
                 console.error('Error fetching prediction:', err);
@@ -271,7 +271,7 @@ export default {
         },
         async fetchNews() {
             try {
-                const res = await axios.get(' https://3af9049ebeaf.ngrok-free.app/api/v1/cryptoNewsList/');
+                const res = await axios.get(' https://09a422305f64.ngrok-free.app/api/v1/cryptoNewsList/');
                 this.latestNews = res.data.slice(0, 10);
             } catch (err) {
                 console.error('Error fetching news:', err);
